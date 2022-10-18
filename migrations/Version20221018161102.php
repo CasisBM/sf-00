@@ -20,12 +20,15 @@ final class Version20221018161102 extends AbstractMigration
     public function up(Schema $schema): void
     {
         // this up() migration is auto-generated, please modify it to your needs
+        
 
     }
 
     public function down(Schema $schema): void
     {
         // this down() migration is auto-generated, please modify it to your needs
-
+        $this->addSql("INSERT INTO article (titre, description, categorie_id) VALUES ('concepteur, developpeur informatique', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco', 1)");
+        $this->addSql("INSERT INTO article (titre, description, categorie_id) VALUES ('marketing digital et gestion de sites e-commerce', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco', 2)");
+        $this->addSql("INSERT INTO article (titre, description, categorie_id) VALUES ('agent de sûrete et de securitee privee', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco', 3)");
     }
 }
